@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -o errexit
+
+docker compose up -d redis mysql
+bin/wait-for-services
