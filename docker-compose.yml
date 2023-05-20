@@ -1,13 +1,14 @@
 version: '3.7'
 services:
-  postgres:
-    image: postgres:13-alpine
+  mysql:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
     environment:
-      POSTGRES_HOST_AUTH_METHOD: trust
-    ports:
-      - "5432:5432"
+      MYSQL_ROOT_PASSWORD: password
     volumes:
-      - 'postgres:/var/lib/postgresql/data'
+      - mysql:/var/lib/mysql:cached
+    ports:
+      - "3306:3306"
   redis:
     image: redis:6.2-alpine
     ports:
@@ -16,7 +17,7 @@ services:
       - 'redis:/data'
   web:
     depends_on:
-      - 'postgres'
+      - 'mysql'
       - 'redis'
     build:
       context: .
@@ -30,12 +31,13 @@ services:
       - .env:/app/.env
     environment:
       REDIS_URL: redis://redis:6379/0
-      DB_HOST: postgres
-      DB_PORT: 5432
+      DATABASE_USERNAME: root
+      DATABASE_PASSWORD: root
+      DB_PORT: 3306
       DISABLE_SPRING: 1
   worker:
     depends_on:
-      - 'postgres'
+      - 'mysql'
       - 'redis'
     build:
       context: .
@@ -53,5 +55,5 @@ services:
 
 volumes:
   redis:
-  postgres:
+  mysql:
   bundle_cache:
