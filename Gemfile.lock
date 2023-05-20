@@ -5,6 +5,27 @@ GIT
     sassc (2.4.0)
       ffi (~> 1.9)
 
+PATH
+  remote: ../spree_backend
+  specs:
+    spree_backend (4.5.1)
+      babel-transpiler (~> 0.7)
+      bootstrap (~> 4.0)
+      flag-icons-rails (~> 3.4)
+      flatpickr (~> 4.6)
+      glyphicons (~> 1.0)
+      hotwire-rails
+      inline_svg (~> 1.5)
+      jquery-rails (~> 4.3)
+      jquery-ui-rails (~> 6.0)
+      jsbundling-rails
+      responders
+      sass-rails (>= 5)
+      select2-rails (~> 4.0.6)
+      spree (>= 4.4.0)
+      sprockets (~> 4.0)
+      tinymce-rails (~> 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -508,23 +529,6 @@ GEM
       devise-encryptable (= 0.2.0)
       spree_core (>= 4.5.0)
       spree_extension
-    spree_backend (4.5.1)
-      babel-transpiler (~> 0.7)
-      bootstrap (~> 4.0)
-      flag-icons-rails (~> 3.4)
-      flatpickr (~> 4.6)
-      glyphicons (~> 1.0)
-      hotwire-rails
-      inline_svg (~> 1.5)
-      jquery-rails (~> 4.3)
-      jquery-ui-rails (~> 6.0)
-      jsbundling-rails
-      responders
-      sass-rails (>= 5)
-      select2-rails (~> 4.0.6)
-      spree (>= 4.4.0)
-      sprockets (~> 4.0)
-      tinymce-rails (~> 5.0)
     spree_cli (4.5.2)
       thor (~> 1.0)
     spree_core (4.5.2)
@@ -705,7 +709,7 @@ DEPENDENCIES
   sidekiq
   spree (~> 4.5)
   spree_auth_devise (~> 4.5)
-  spree_backend (~> 4.5)
+  spree_backend!
   spree_dev_tools
   spree_emails (~> 4.5)
   spree_gateway (~> 3.10)
