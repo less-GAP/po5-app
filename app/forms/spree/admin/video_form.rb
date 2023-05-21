@@ -15,6 +15,6 @@ class Spree::Admin::VideoForm
 
     return false if video_uri.blank?
 
-    Spree::Video.create(video_url: video_uri, name: name, description: description)
+    Spree::Video.create(video_url: "https://player.vimeo.com#{video_uri}", name: name, description: description)
   end
 end
