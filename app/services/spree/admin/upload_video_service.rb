@@ -7,7 +7,7 @@ class Spree::Admin::UploadVideoService
 
   def upload_video(video_file)
     begin
-      upload = client.upload_video(video_file)
+      upload = @client.upload_video(video_file)
       video_uri = upload['uri']
       File.delete(video_file.path)
       video_uri

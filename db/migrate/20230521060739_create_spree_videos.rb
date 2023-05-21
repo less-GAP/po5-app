@@ -3,7 +3,7 @@ class CreateSpreeVideos < ActiveRecord::Migration[7.0]
     create_table :spree_videos do |t|
       t.string :name
       t.text :description
-      t.string :vimeo_url
+      t.string :video_url
       t.timestamps
     end
   end

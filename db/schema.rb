@@ -1410,7 +1410,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_21_060739) do
   create_table "spree_videos", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "vimeo_url"
+    t.string "video_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
