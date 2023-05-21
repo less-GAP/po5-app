@@ -1,1 +1,21 @@
-Hello the world
+<div class="container">
+  <h1>Videos</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Vimeo URL</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @videos.each do |video| %>
+      <tr>
+        <td><%= video.name %></td>
+        <td><%= video.description %></td>
+        <td><%= video.vimeo_url %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
