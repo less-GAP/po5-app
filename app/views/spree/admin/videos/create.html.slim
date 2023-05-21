@@ -1,0 +1,17 @@
+.container
+  h1 New Video
+
+  = form_with(model: @video, url: spree_admin_videos_path, local: true) do |form|
+    .field
+      = form.label :name
+      = form.text_field :name, class: 'form-control'
+
+    .field
+      = form.label :description
+      = form.text_area :description, class: 'form-control'
+
+    .field
+      = form.label :video_file
+      = form.file_field :video_file
+
+    = form.submit 'Save', class: 'btn btn-primary'

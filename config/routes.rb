@@ -12,7 +12,8 @@ Rails.application.routes.draw do
 
   Spree::Core::Engine.add_routes do
     namespace :admin do
-      resources :videos
+      resources :videos, only: [:index, :new, :create]
+      get 'videos/new', to: 'videos#new', as: 'new_spree_video'
     end
   end
 end
