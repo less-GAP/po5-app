@@ -1,0 +1,14 @@
+.container
+  h1 Videos
+  table.table
+    thead
+      tr
+        th Name
+        th Description
+        th Vimeo URL
+    tbody
+      - @videos.each do |video|
+        tr
+          td = video.name
+          td = video.description
+          td = video.vimeo_url
