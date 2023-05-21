@@ -1,15 +1,14 @@
+= stylesheet_link_tag 'spree/admin/videos'
+
 .container
   h1 Videos
   a.btn.btn-primary href="#{spree.admin_new_spree_video_path}" Create New Video
-  table.table
-    thead
-      tr
-        th Name
-        th Description
-        th Vimeo URL
-    tbody
-      - @videos.each do |video|
-        tr
-          td = video.name
-          td = video.description
-          td = video.video_url
+  .videos-grid
+    - @videos.each_slice(3) do |video_row|
+      .video-row
+        - video_row.each do |video|
+          .video-item
+            .video-capture
+              iframe src=video.video_url frameborder="0" allowfullscreen
+            .video-name
+              = video.name

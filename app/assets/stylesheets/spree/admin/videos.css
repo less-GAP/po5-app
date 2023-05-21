@@ -1,0 +1,48 @@
+.container {
+    padding-top: 20px;
+}
+
+.actions {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.videos-grid {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.video-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.video-item {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
+
+.video-capture {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.video-capture iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-name {
+    margin-top: 10px;
+    text-align: center;
+}
