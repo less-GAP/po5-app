@@ -6,7 +6,7 @@
   = Spree.t(:new_video)
 
 .card
-  .card-boby
+  .card-body
     = form_with(model: @video, url: spree.admin_videos_path, local: true) do |form|
       fieldset data-hook="new_video"
         = form.field_container :name
