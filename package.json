@@ -1,9 +1,15 @@
 {
   "dependencies": {
+    "@rails/webpacker": "5.4.4",
     "@spree/dashboard": "^0.1.0",
-    "esbuild": "^0.14.1"
+    "esbuild": "^0.14.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3"
   }
 }
