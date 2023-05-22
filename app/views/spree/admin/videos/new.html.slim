@@ -1,17 +1,22 @@
+= stylesheet_link_tag 'spree/backend/spree_admin'
+
 .container
   h1 New Video
 
-  = form_with(model: @video, url: spree.admin_videos_path, local: true) do |form|
-    .field
-      = form.label :name
-      = form.text_field :name, class: 'form-control'
+  .card
+    .card-boby
+      = form_with(model: @video, url: spree.admin_videos_path, local: true, class: 'spree-form') do |form|
+        fieldset
+          .field.form-group
+            = form.label :name
+            = form.text_field :name, class: 'form-control', required: :required
 
-    .field
-      = form.label :description
-      = form.text_area :description, class: 'form-control'
+          .field.form-group
+            = form.label :description
+            = form.text_area :description, class: 'form-control'
 
-    .field
-      = form.label :video_file
-      = form.file_field :video_file
+          .field.form-group
+            = form.label :video_file
+            = form.file_field :video_file
 
-    = form.submit 'Save', class: 'btn btn-primary'
+          = form.submit 'Save', class: 'btn btn-primary'
