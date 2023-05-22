@@ -2,9 +2,18 @@
     padding-top: 20px;
 }
 
+.video-header {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
 .actions {
     text-align: right;
     margin-bottom: 20px;
+}
+
+.btn-right {
+    margin-left: auto;
 }
 
 .videos-grid {

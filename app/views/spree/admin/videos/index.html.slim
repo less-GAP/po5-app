@@ -2,7 +2,8 @@
 
 .container
   h1 Videos
-  a.btn.btn-primary href="#{spree.admin_new_spree_video_path}" Create New Video
+  .video-header
+    a.btn.btn-primary.btn-right href="#{spree.admin_new_spree_video_path}" Create New Video
   .videos-grid
     - @videos.each_slice(3) do |video_row|
       .video-row
