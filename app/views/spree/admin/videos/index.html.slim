@@ -1,0 +1,17 @@
+.container
+  h1 Videos
+  .video-header
+    a.btn.btn-primary.btn-right href="#{spree.admin_new_spree_video_path}" Create New Video
+  .videos-grid
+    - @videos.each_slice(3) do |video_row|
+      .video-row
+        - video_row.each do |video|
+          .video-item
+            .video-capture
+              iframe src=video.video_url frameborder="0" allowfullscreen
+            .video-info
+              .video-name
+                = video.name
+                span.d-flex.justify-content-end
+                  = link_to_delete video, no_text: true
+                  = link_to_edit video, no_text: true, class: 'edit'

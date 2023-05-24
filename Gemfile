@@ -101,3 +101,5 @@ gem 'oj'
 
 # Fix SCSS errors with Ruby 3 on MacOS
 gem 'sassc', github: 'sass/sassc-ruby', group: :development
+gem 'slim'
+gem 'vimeo_me2', :git => "https://github.com/bo-oz/vimeo_me2.git"

@@ -9,4 +9,11 @@ Rails.application.routes.draw do
       password == Rails.application.secrets.sidekiq_password
   end
   mount Sidekiq::Web, at: '/sidekiq'
+
+  Spree::Core::Engine.add_routes do
+    namespace :admin do
+      resources :videos, only: [:index, :new, :create, :destroy, :edit, :show, :update]
+      get 'videos/new', to: 'videos#new', as: 'new_spree_video'
+    end
+  end
 end
