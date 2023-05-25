@@ -172,6 +172,7 @@ GEM
     bullet (7.0.3)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
+    byebug (11.1.3)
     cancancan (3.5.0)
     capybara (3.37.1)
       addressable
@@ -238,8 +239,6 @@ GEM
       sass-rails
     flamegraph (0.9.5)
     flatpickr (4.6.11.0)
-    font_assets (0.1.14)
-      rack
     friendly_id (5.5.0)
       activerecord (>= 4.0.0)
     gem-release (2.2.2)
@@ -367,6 +366,9 @@ GEM
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    pry-byebug (3.10.1)
+      byebug (~> 11.0)
+      pry (>= 0.13, < 0.15)
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -674,6 +676,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-22
   x86_64-darwin-21
   x86_64-darwin-22
   x86_64-linux
@@ -687,12 +690,12 @@ DEPENDENCIES
   dalli
   dotenv-rails (~> 2.1, >= 2.1.1)
   flamegraph
-  font_assets
   letter_opener
   listen
   memory_profiler
   mysql2 (= 0.5.5)
   oj
+  pry-byebug
   puma
   rack-cache
   rack-cors

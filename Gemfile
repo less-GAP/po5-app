@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '3.2.0'
 
+gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7'
 # Use postgresql as the database for Active Record
@@ -23,8 +25,6 @@ gem 'puma'
 gem 'awesome_print'
 
 group :development, :test do
-  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
-
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
@@ -47,6 +47,7 @@ group :development do
   gem 'web-console', '~> 4.0'
 
   gem 'letter_opener'
+  gem 'pry-byebug'
 end
 
 group :test do
@@ -56,7 +57,7 @@ end
 # Heroku fix
 group :production do
   gem 'rack-timeout'
-  gem 'font_assets'
+  # gem 'font_assets'
 end
 
 # file uploades & assets
