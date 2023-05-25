@@ -64,3 +64,9 @@
   font-weight: bold;
   margin-right: 10px;
 }
+
+.video-capture-detail {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}

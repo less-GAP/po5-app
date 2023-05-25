@@ -1,17 +1,19 @@
-.container
-  h1 Videos
-  .video-header
-    a.btn.btn-primary.btn-right href="#{spree.admin_new_spree_video_path}" Create New Video
-  .videos-grid
-    - @videos.each_slice(3) do |video_row|
-      .video-row
-        - video_row.each do |video|
-          .video-item
-            .video-capture
-              iframe src=video.video_url frameborder="0" allowfullscreen
-            .video-info
-              .video-name
-                = video.name
-                span.d-flex.justify-content-end
-                  = link_to_delete video, no_text: true
-                  = link_to_edit video, no_text: true, class: 'edit'
+- content_for :page_title do
+  = plural_resource_name(Spree::Video)
+
+- content_for :page_actions do
+  = button_link_to Spree.t(:new_video), new_object_url, class: "btn-success", icon: 'add.svg', id: 'admin_new_video'
+
+.videos-grid
+  - @videos.each_slice(3) do |video_row|
+    .video-row
+      - video_row.each do |video|
+        .video-item
+          .video-capture
+            iframe src=video.video_url frameborder="0" allowfullscreen
+          .video-info.d-flex.just-content-between.alight-items-center
+            .video-name
+              = video.name
+            span.d-flex.justify-content-end
+              = link_to_delete video, no_text: true
+              = link_to_edit video, no_text: true, class: 'edit'
