@@ -76,6 +76,7 @@ gem 'spree_sample', '~> 4.5'
 gem 'spree_emails', '~> 4.5'
 gem 'spree_backend', path: './../spree_backend'
 gem 'spree_gateway', '~> 3.10'
+gem 'spree_frontend', path: './../spree_rails_frontend'
 gem 'spree_auth_devise', '~> 4.5'
 gem 'spree_i18n', '~> 5.1'
 gem 'spree_dev_tools', require: false, group: %w[test development]
@@ -100,5 +101,11 @@ gem 'activerecord-nulldb-adapter'
 # improved JSON rendering performance
 gem 'oj'
 
+gem 'jsbundling-rails'
+gem 'turbo-rails'
+
 # Fix SCSS errors with Ruby 3 on MacOS
 gem 'sassc', github: 'sass/sassc-ruby', group: :development
+
+# Use Redis for Action Cable
+gem "redis", "~> 4.0"
