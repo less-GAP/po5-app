@@ -1,0 +1,25 @@
+= render partial: 'spree/admin/shared/error_messages', locals: { target: @video }
+
+- content_for :page_title do
+  = link_to Spree.t(:videos), spree.admin_videos_url
+  '/
+  = Spree.t(:new_video)
+
+.card
+  .card-body
+    = form_with(model: @video, url: spree.admin_videos_path, local: true) do |form|
+      fieldset data-hook="new_video"
+        = form.field_container :name
+          = form.label :name, raw(Spree.t(:name) + required_span_tag)
+          = form.text_field :name, class: 'form-control title', required: :required
+
+        = form.field_container :description
+          = form.label :description, raw(Spree.t(:description) + required_span_tag)
+          = form.text_area :description, class: 'form-control', required: :required
+
+        = form.field_container :video_file
+          = form.label :video_file, raw(Spree.t(:video_file) + required_span_tag)
+          = form.file_field :video_file, required: :required
+
+        = render partial: 'spree/admin/shared/new_resource_links'
+

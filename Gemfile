@@ -109,3 +109,5 @@ gem 'sassc', github: 'sass/sassc-ruby', group: :development
 
 # Use Redis for Action Cable
 gem "redis", "~> 4.0"
+gem 'slim'
+gem 'vimeo_me2', :git => "https://github.com/bo-oz/vimeo_me2.git"

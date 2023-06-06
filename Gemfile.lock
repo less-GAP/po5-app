@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/bo-oz/vimeo_me2.git
+  revision: 137cdbce1cd14d033729407ee6817d6a9cb9e741
+  specs:
+    vimeo_me2 (1.2.1)
+      httparty (>= 0.14.0)
+
+GIT
   remote: https://github.com/sass/sassc-ruby.git
   revision: 4fce2b635ca5d616a8b1381c64846410bc785ea4
   specs:
@@ -280,6 +287,9 @@ GEM
       rails (>= 6.0.0)
       stimulus-rails
       turbo-rails
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     i18n_data (0.17.1)
@@ -348,6 +358,7 @@ GEM
       i18n (>= 0.6.4, <= 2)
     msgpack (1.5.6)
     multi_json (1.15.0)
+    multi_xml (0.6.0)
     mysql2 (0.5.5)
     net-imap (0.3.4)
       date
@@ -537,6 +548,9 @@ GEM
       simplecov_json_formatter (~> 0.1)
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
+    slim (5.1.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
     spree (4.5.2)
       spree_api (= 4.5.2)
       spree_cli (= 4.5.2)
@@ -650,6 +664,7 @@ GEM
       railties (>= 6.0.0)
     stringex (2.8.6)
     syslog_protocol (0.9.2)
+    temple (0.10.1)
     terser (1.1.12)
       execjs (>= 0.3.0, < 3)
     thor (1.2.1)
@@ -732,6 +747,7 @@ DEPENDENCIES
   sendgrid-actionmailer
   sentry-raven
   sidekiq
+  slim
   spree (~> 4.5)
   spree_auth_devise (~> 4.5)
   spree_backend!
@@ -746,6 +762,7 @@ DEPENDENCIES
   terser
   turbo-rails
   vcr
+  vimeo_me2!
   web-console (~> 4.0)
   webmock
 

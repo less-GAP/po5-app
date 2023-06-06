@@ -15,6 +15,10 @@
     <%= tab Spree.t('admin.home'), url: spree.admin_dashboard_path, match_path: '/dashboard', icon: 'house-door-fill.svg' %>
   </ul>
 
+  <ul class="nav nav-sidebar" id="sidebarVideos">
+    <%= tab 'Videos', url: spree.admin_videos_path, match_path: '/videos', icon: 'house-door-fill.svg' %>
+  </ul>
+
   <%# if can? :admin, Spree::Order %>
 <!--    <ul class="nav nav-sidebar" id="sidebarOrder">-->
       <%#= main_menu_tree Spree.t(:orders), icon: "inbox-fill.svg", sub_menu: "orders", url: "#sidebar-orders" %>
